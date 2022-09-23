@@ -4,6 +4,21 @@ author: "Sneha Mehta"
 date: "2022-09-23"
 output: html_document
 ---
+```{r setup}
+library(palmerpenguins)
+```
+
+
+## Problem 1
+Loading the `penguins` dataset:
+```{r}
+data("penguins", package = "palmerpenguins")
+View(penguins)
+nrow(penguins)
+ncol(penguins)
+mean(penguins$flipper_length_mm)
+```
+This dataset describes the species, island, bill size (depth and length), flipper length, body mass, sex, and year catalogued of penguins. There are 344 entries (rows) to the dataset and 8 variables (columns). 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
