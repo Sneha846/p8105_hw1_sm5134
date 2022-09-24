@@ -2,7 +2,7 @@
 title: "p8105_hw1_sm5134"
 author: "Sneha Mehta"
 date: "2022-09-23"
-output: html_document
+output: github_document
 ---
 ```{r setup}
 library(palmerpenguins)
@@ -19,7 +19,7 @@ nrow(penguins)
 ncol(penguins)
 mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
-This dataset describes the species, island, bill size (depth and length), flipper length, body mass, sex, and year catalogued of penguins. There are 344 entries (rows) to the dataset and 8 variables (columns). The average flipper length amongst the penguins is `mean(penguins$flipper_length_mm, na.rm = TRUE)`.
+This dataset describes the species, island, bill size (depth and length), flipper length, body mass, sex, and year catalogued of penguins. There are 344 entries (rows) to the dataset and 8 variables (columns). The average flipper length amongst the penguins is 200.92.
 
 ```{r plot}
 ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color=species)) + geom_point()
@@ -35,7 +35,7 @@ set.seed(846)
 Prob2_df = tibble(
   x = rnorm(10),
   x_pos = x > 0,
-  description = c("bubbly", "mighty", "quaint", "barbarious", "barbarious", "bubbly", "mighty", "mighty", "bubbly", "quaint"),
+  description = c("bubbly", "mighty", "quaint", "barbarious", "barbarious", "bubbly", "mighty", "mighty", "bubbly", "quaint"), ##change to different words
   quality = factor(c("high", "medium", "medium", "low", "high", "high", "low", "medium", "low", "low"))
   
 )
