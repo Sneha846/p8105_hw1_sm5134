@@ -16,9 +16,14 @@ data("penguins", package = "palmerpenguins")
 View(penguins)
 nrow(penguins)
 ncol(penguins)
-mean(penguins$flipper_length_mm)
+mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
-This dataset describes the species, island, bill size (depth and length), flipper length, body mass, sex, and year catalogued of penguins. There are 344 entries (rows) to the dataset and 8 variables (columns). 
+This dataset describes the species, island, bill size (depth and length), flipper length, body mass, sex, and year catalogued of penguins. There are 344 entries (rows) to the dataset and 8 variables (columns). The average flipper length amongst the penguins is `mean(penguins$flipper_length_mm, na.rm = TRUE)`.
+
+```{r}
+ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color=species)) + geom_point()
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
