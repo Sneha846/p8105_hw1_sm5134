@@ -4,7 +4,7 @@ author: "Sneha Mehta"
 date: "2022-09-23"
 output: html_document
 ---
-```{r setup, echo=FALSE}
+```{r setup}
 library(palmerpenguins)
 library(tidyverse)
 ```
